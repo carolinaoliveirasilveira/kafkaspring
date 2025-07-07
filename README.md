@@ -60,3 +60,8 @@ ecommerce-groupId
 ```
 
 ##  Autora
+**Carolina Oliveira Silveira**  
+Desenvolvedora Back-end | Estudante de Análise e Desenvolvimento de Sistemas
+
+- 💼 [LinkedIn](https://www.linkedin.com/in/carolinaoliveirasilveira/)
+- 📧 carolinaoliveirasilveira@outlook.com
