@@ -1,6 +1,7 @@
 package com.kafkaspring;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -13,7 +14,9 @@ public class KafkaProducerController {
     private KafkaTemplate<String, String> kafkaTemplate;
 
     @GetMapping("/producer/{message}")
-    public void producer(@PathVariable("message") String message) {
-        this.kafkaTemplate.send("ecommerce.cliente2", message);
+    public ResponseEntity<String> producer(@PathVariable String message) {
+        kafkaTemplate.send("ecommerce.cliente2", message);
+        return ResponseEntity.ok("Mensagem enviada ao tópico ecommerce.cliente2");
     }
 }
+
